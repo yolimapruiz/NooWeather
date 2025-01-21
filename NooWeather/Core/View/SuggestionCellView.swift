@@ -19,20 +19,32 @@ struct SuggestionCellView: View {
                 VStack(alignment: .leading) {
                     Text(city.name)
                         .font(.custom("Poppins-SemiBold", size: 20))
+                        .padding(.top, 16)
                         
-                    Text("20")
-                        .font(.custom("Poppins-Medium", size: 60))
+                    HStack {
+                        Text("20")
+                            .font(.custom("Poppins-Medium", size: 60))
+                        VStack {
+                            Text("°")
+                                .font(.custom("Poppins-Regular", size: 45))
+                                .foregroundStyle(Color.customDarkGray)
+                                .fontWeight(.bold)
+                            
+                            Spacer()
+                        }
+                    }
+                    .padding(.bottom, 16)
                         
                 }
                 .padding(.leading, 32)
                 Spacer()
-                Image(systemName: "cloud.sun.fill")
+                Image("Group 37")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 83, height: 67)
                     .foregroundColor(.blue)
+                    .padding(.trailing, 31)
             }
-            .padding()
             .background(Color(.systemGray6))
             .cornerRadius(12)
         }

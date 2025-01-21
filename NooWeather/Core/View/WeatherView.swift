@@ -142,13 +142,13 @@ struct WeatherView: View {
             }
             HStack {
                 Text("\(Int(weather.temp))")
-                    .font(.custom("Poppins-Medium", size: 70))
+                   .font(.custom("Poppins-Medium", size: 68))
+                   // .font(.headline)
                     .foregroundStyle(Color.customDarkGray)
-                    .fontWeight(.bold)
+                    
                 VStack {
                     Text("°")
                         .font(.custom("Poppins-Medium", size: 40))
-                        .fontWeight(.medium)
                         .foregroundStyle(Color.customDarkGray)
                         .fontWeight(.bold)
                     
@@ -156,7 +156,7 @@ struct WeatherView: View {
                 }
                 
             }
-            .frame(width: 105, height: 70)
+            .frame(width: 105)
         }
     }
     
